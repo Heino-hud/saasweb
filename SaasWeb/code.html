@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Association Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #00539C;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #00539C;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #004080;
+        }
+
+        footer {
+            background-color: #00539C;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Association Registration</h1>
+        <p>Register to become a member of our association</p>
+    </header>
+
+    <section>
+        <h2>Registration Form</h2>
+        <p>Please fill in the details below to register.</p>
+
+        <form action="/submit_registration" method="post">
+            <!-- Name of Region -->
+            <label for="region">Name of Region:</label>
+            <input type="text" id="region" name="region" placeholder="Enter your region" required>
+
+            <!-- Voter's Number -->
+            <label for="voter_number">Voter's Number:</label>
+            <input type="number" id="voter_number" name="voter_number" placeholder="Enter your voter's number" required>
+
+            <!-- Surname -->
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" placeholder="Enter your surname" required>
+
+            <!-- First Name -->
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" placeholder="Enter your first name" required>
+
+            <!-- Address -->
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" placeholder="Enter your address" rows="3" required></textarea>
+
+            <!-- Signature -->
+            <label for="signature">Signature:</label>
+            <input type="text" id="signature" name="signature" placeholder="Enter your signature" required>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Register">
+        </form>
+    </section>
+
+    <footer>
+        <p>Copyright &copy; 2024 Association</p>
+    </footer>
+
+</body>
+</html>
